@@ -12,7 +12,3 @@ class Car(name: String, movableStrategy: MovableStrategy?) {
         }
     }
 }
-
-fun interface MovableStrategy {
-    fun isMovable(): Boolean
-}
