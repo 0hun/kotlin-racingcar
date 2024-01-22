@@ -25,29 +25,29 @@ internal class CarTest {
         val randomNumber = (Math.random() * 10 + 4).toInt()
 
         val movableStrategy = MovableStrategy { randomNumber >= 4 }
-        val car = Car(name, movableStrategy);
+        val car = Car(name, movableStrategy)
 
         // when
-        car.move();
+        car.move()
 
         // then
-        assertThat(car.position).isEqualTo(1);
+        assertThat(car.position).isEqualTo(1)
     }
 
     @Test
     fun `자동차 랜덤 이동 실패 테스트`() {
         // given
         val name = "강호동"
-        val randomNumber = (Math.random() + 3).toInt();
+        val randomNumber = (Math.random() + 3).toInt()
 
         val movableStrategy = MovableStrategy { randomNumber >= 4 }
         val car = Car(name, movableStrategy);
 
         // when
-        car.move();
+        car.move()
 
         // then
-        assertThat(car.position).isEqualTo(0);
+        assertThat(car.position).isEqualTo(0)
     }
 
 }
