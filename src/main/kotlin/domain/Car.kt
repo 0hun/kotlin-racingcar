@@ -11,4 +11,8 @@ class Car(name: String, movableStrategy: MovableStrategy?) {
             this.position += 1
         }
     }
+
+    fun curPosition(): Int {
+        return this.position
+    }
 }
