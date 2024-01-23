@@ -8,7 +8,7 @@ internal class CarRaceTest {
     @Test
     fun `자동차 1대를 경주를 4회만큼 이동 테스트`() {
         // given
-        val names = arrayOf("강호동")
+        val names = listOf("강호동")
         val times = 4
 
         // when
@@ -22,7 +22,7 @@ internal class CarRaceTest {
         @Test
     fun `자동차 1대를 경주를 0회 입력 후 거리가 0인지 테스트`() {
         // given
-        val names = arrayOf("강호동")
+        val names = listOf("강호동")
         val times = 0
 
         // when

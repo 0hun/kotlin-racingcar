@@ -8,7 +8,7 @@ internal class CarsTest {
     @Test
     fun `자동차 목록 생성 테스트`() {
         // given
-        val names = arrayOf("강호동", "유재색")
+        val names = listOf("강호동", "유재색")
 
         // when
         val cars = CarFactory.makeCars(names)

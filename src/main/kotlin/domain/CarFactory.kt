@@ -1,7 +1,7 @@
 package domain
 
 object CarFactory {
-    fun makeCars(names: Array<String>): Cars {
+    fun makeCars(names: List<String>): Cars {
         val carList: MutableList<Car> = ArrayList()
 
         val movableStrategy: MovableStrategy = CarMovableStrategy()
