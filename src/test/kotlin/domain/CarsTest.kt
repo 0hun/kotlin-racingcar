@@ -11,7 +11,7 @@ internal class CarsTest {
         val names = arrayOf("강호동", "유재색")
 
         // when
-        val cars = CarFactory.makeCars(names);
+        val cars = CarFactory.makeCars(names)
 
         // then
         assertThat(cars.cars.size).isEqualTo(2)
