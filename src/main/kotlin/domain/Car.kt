@@ -1,6 +1,6 @@
 package domain
 
-class Car(val name: String, var movableStrategy: MovableStrategy?) {
+class Car(val name: String, var movableStrategy: MovableStrategy) {
 
     var position: Int = 0
 
@@ -9,12 +9,9 @@ class Car(val name: String, var movableStrategy: MovableStrategy?) {
     }
 
     fun move() {
-        if (movableStrategy!!.isMovable()) {
+        if (movableStrategy.isMovable()) {
             this.position += 1
         }
     }
 
-    fun curPosition(): Int {
-        return this.position
-    }
 }

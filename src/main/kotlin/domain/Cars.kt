@@ -9,7 +9,7 @@ class Cars(var cars: List<Car>) {
 
     fun findWinners(times: Int): String {
         return cars.stream()
-            .filter { car: Car -> car.curPosition() == times }
+            .filter { car: Car -> car.position == times }
             .map(Car::name)
             .collect(Collectors.joining(","))
     }

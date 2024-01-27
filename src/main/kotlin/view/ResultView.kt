@@ -14,8 +14,8 @@ class ResultView {
 
     fun printPosition(cars: Cars) {
         cars.cars.stream()
-            .filter { car -> car.curPosition() > 0 }
-            .forEach { car -> printPath(car.name, car.curPosition()) }
+            .filter { car -> car.position > 0 }
+            .forEach { car -> printPath(car.name, car.position) }
 
         printNextLine()
     }

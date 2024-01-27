@@ -12,9 +12,11 @@ internal class CarTest {
     fun `자동차 생성 테스트`() {
         // given
         val name = "강호동"
+        val randomNumber = (Math.random() * 10 + 4).toInt()
+        val movableStrategy = MovableStrategy { randomNumber >= 4 }
 
         // when
-        val car = Car(name, null)
+        val car = Car(name, movableStrategy)
 
         // then
         assertThat(car).extracting("name", "position")
@@ -25,11 +27,13 @@ internal class CarTest {
     fun `자동차 생성 실패 테스트 - 이름 5글자 초과`() {
         // given
         val name = "강호동유재석박명수"
+        val randomNumber = (Math.random() * 10 + 4).toInt()
+        val movableStrategy = MovableStrategy { randomNumber >= 4 }
 
         // when
         // then
         assertThrows<IllegalArgumentException> {
-            Car(name, null)
+            Car(name, movableStrategy)
         }
     }
 

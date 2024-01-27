@@ -16,7 +16,7 @@ internal class CarRaceTest {
         val cars = carRace.start()
 
         // then
-        assertThat(cars.cars[0].curPosition()).isGreaterThan(0)
+        assertThat(cars.cars[0].position).isGreaterThan(0)
     }
 
         @Test
@@ -30,7 +30,7 @@ internal class CarRaceTest {
         val cars = carRace.start()
 
         // then
-        assertThat(cars.cars[0].curPosition()).isEqualTo(0)
+        assertThat(cars.cars[0].position).isEqualTo(0)
     }
 
 }
