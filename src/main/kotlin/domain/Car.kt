@@ -1,10 +1,12 @@
 package domain
 
-class Car(name: String, movableStrategy: MovableStrategy?) {
+class Car(val name: String, var movableStrategy: MovableStrategy?) {
 
-    val name: String = name
     var position: Int = 0
-    var movableStrategy: MovableStrategy? = movableStrategy
+
+    init {
+        require(name.length <= 5) { "이름은 5글자를 초과할 수 없습니다." }
+    }
 
     fun move() {
         if (movableStrategy!!.isMovable()) {
